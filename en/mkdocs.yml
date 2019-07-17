@@ -1,0 +1,159 @@
+# Copyright (c) 2019, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+#
+# WSO2 Inc. licenses this file to you under the Apache License,
+# Version 2.0 (the "License"); you may not use this file except
+# in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied. See the License for the
+# specific language governing permissions and limitations
+# under the License.
+
+# Project information
+site_name: WSO2 API Manager Documentation 3.0.0
+site_description: Documentation for WSO2 API Manager
+site_author: WSO2
+site_url: https://wso2.com/
+
+# Repository
+repo_name: wso2/docs-apim
+repo_url: https://github.com/wso2/docs-apim
+edit_uri: https://github.com/wso2/docs-apim/edit/master/en/docs/
+dev_addr: localhost:8000
+
+# Copyright
+copyright: WSO2 API Manager - Documentation
+
+# Configuration
+theme: material
+theme:
+  name: material
+  palette:
+    primary: deep-orange
+    accent: deep-orange
+  custom_dir: theme/material
+  logo: images/logo.svg
+  highlightjs: true
+  feature:
+    tabs: true
+  language: 'en'
+  
+# Navigation
+nav:
+    - Welcome to WSO2 API Manager Documentation: 'index.md'
+    - Getting Started :
+        - Overview : 'GettingStarted/overview.md'
+        - Key Concepts : 'GettingStarted/key-concepts.md'
+        - Quick Start Guide: 'GettingStarted/quick-start-guide.md'
+    - Learn : 
+        - API Publisher :
+            - API Design :
+                - Create REST API : 'Learn/APIPublish/create-and-Publish-an-API.md'
+                - Create an API from a Swagger Definition: 'Learn/APIPublish/create-and-Publish-an-API-from-a-Swagger-Definition.md'
+                - SOAP API : ''
+                - Websocket API : ''
+                - API Proxy Creation : ''
+                - Endpoints: ''
+            - Publish APIs : ''
+            - Prototype API: ''
+            - Lifecycle Management: ''
+            - API Versioning:
+                - Create Default Version: ''
+                - Create a New Version: ''
+            - API Documentation: ''
+            - Message Mediation Policies: ''
+        - API Developer Portal: 'Learn/APIDeveloper/dummy.md'
+        - API Gateway : 'Learn/APIGateway/dummy.md'
+        - API Microgateway : 'Learn/APIMicrogateway/dummy.md'
+        - Rate Limiting : 'Learn/RateLimiting/dummy.md'
+        - API Security : 'Learn/APISecurity/dummy.md'
+        - Analytics : 'Learn/Analytics/dummy.md'
+        - Administration : ''
+        - Extentions : ''
+        - Reference : ''
+    - Develop: 
+        - Working with the Source Code: 'Develop/develop1.md'
+        - WSO2 Admin Services: 'Develop/develop.md'
+        - Product APIs: 'Develop/develop.md'
+        - Working with Audit Logs: 'Develop/develop.md'
+        - Enabling Authentication Session Persistence: 'Develop/develop.md'
+        - Java Documentation: 'Develop/develop.md'
+        - Using the Registry REST API : 'Develop/develop.md'
+    - Deploy:
+        - Installation Guide :
+            - Installation Prerequisites: 'Deploy/deploy1.md'
+            - Installing the Product:
+                - Installing on Linux or OS X: 'Deploy/deploy.md'
+                - Installing on Solaris : 'Deploy/deploy.md'
+                - Installing on Windows : 'Deploy/deploy.md'
+                - Installing as a Linux Service : 'Deploy/deploy.md'
+                - Installing as a Windows Service : 'Deploy/deploy.md'
+            - Running the Product: 'Deploy/deploy.md'
+            - Basic Health Checks: 'Deploy/deploy.md'
+        - Deployment Patterns : 'Deploy/deploy.md'
+    - Administer: 
+            -  Product Administration : 'Administer/administer1.md'
+            -  Product Configurations : 'Administer/administer.md'
+            -  Product Security : 'Administer/administer.md'
+    - Reference : 
+        - Configuration Catalogue: 'Reference/reference1.md' 
+        - Business Scenarios : 
+            - Scenario 1: 'Reference/reference.md'
+            - Scenario 2: 'Reference/reference.md'
+        - WSO2 API Manager Best Practices : 'Reference/reference.md'
+        - Samples: 'Reference/reference.md'
+    - Troubleshooting : 
+        - FAQ: 'Troubleshooting/Troubleshooting.md'
+    - '': page-not-found.md
+     
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      linenums: true
+      use_pygments: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+    
+# Extra
+extra_css:
+  - assets/lib/highlightjs/default.min.css
+  - assets/css/theme.css
+extra_javascript:
+  - assets/lib/highlightjs/highlight.min.js
+  - assets/js/theme.js
+extra:
+  social:
+    - type: github
+      link: https://github.com/wso2
+    - type: twitter
+      link: https://twitter.com/wso2
+    - type: linkedin
+      link: https://www.linkedin.com/company/wso2
+  site_version: 3.0.0
+
+
