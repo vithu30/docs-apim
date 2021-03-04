@@ -84,14 +84,7 @@ The following section describes the flow involved in exchanging a Kerberos ticke
 
 Follow the instructions below to configure Kerberos Grant using the Identity Server as the Key Manager pack:
 
-1.  Download the Identity Server as the Key Manager pack from the WSO2 API Manager product page.
-
-    1. Navigate to [https://wso2.com/api-management/](https://wso2.com/api-management/).
-
-    2. Click **Download**.
-    
-    3. Click **Identity Server as a Key Manager Pack** under **OTHER RESOURCES**.
-
+1.  Download the Identity Server pack from [https://wso2.com/identity-and-access-management/](https://wso2.com/identity-and-access-management/).
 2.  Download the [kerberos grant.jar]({{base_path}}/assets/attachments/kerberos-grant-1.0.0.jar) file.
 3.  Copy the JAR into the `<IS-KM_HOME>/repository/components/lib` directory.
 4.  To enable the **Kerberos grant**, add the following entry to the
@@ -123,33 +116,35 @@ Follow the instructions below to configure Kerberos Grant using the Identity Se
                 Types** you can disable the ones you do not require or wish
                 to block. Select the **kerberos** grant type as an allowed grant type.
                 [![Register new OAuth app]({{base_path}}/assets/img/learn/register-new-oauth-app.png)]({{base_path}}/assets/img/learn/register-new-oauth-app.png)
-            3.  Click **Add**. The following information is added to your
-                service provider.
-                [![OAuth SP clientid clientsecret]({{base_path}}/assets/img/learn/learnoauth-sp-clientid-clientsecret.png)]({{base_path}}/assets/img/learn/oauth-sp-clientid-clientsecret.png)
+            3.  Click **Add**. 
+                The following information is added to your service provider.
+                [![OAuth SP clientid clientsecret]({{base_path}}/assets/img/learn/oauth-sp-clientid-clientsecret.png)]({{base_path}}/assets/img/learn/oauth-sp-clientid-clientsecret.png)
+                <table>
+                <tr>
+                <td>**OAuth Client Key**</td>
+                <td>This is the client key of the service provider, which will be checked for authentication by the Identity Server before providing the access token.
+                </td>
+                </tr>
+                <tr>
+                <td>**OAuth Client Secret**</td>
+                <td>This is the client secret of the service provider, which will be checked for authentication by the Identity Server before providing the access token. Click the **Show** button to view the exact value of this.</td>
+                </tr>
+                <tr>
+                <td>**OAuth Client Key**</td>
+                <td>This is the client key of the service provider, which will be checked for authentication by the Identity Server before providing the access token.
+                </td>
+                </tr>
+                <tr>
+                <td>**Actions**</td>
+                <td>-   **Edit:** Click to edit the OAuth/OpenID Connect Configurations <br>
+                    -   **Revoke:** Click to revoke (deactivate) the OAuth application. This action revokes all tokens issued for this application. In order to activate the application, you have to regenerate the consumer secret. <br>
+                    -   **Regenerate Secret:** Click to regenerate the secret key of the OAuth application. <br>
+                    -   **Delete:** Click to delete the OAuth/OpenID Connect Configurations.</td>
+                </tr>
+                </table>
+                </html>  
 
-                -   **OAuth Client Key** - This is the client key of the
-                    service provider, which will be checked for
-                    authentication by the Identity Server before providing
-                    the access token.
-                -   **OAuth Client Secret** - This is the client secret of
-                    the service provider, which will be checked for
-                    authentication by the Identity Server before providing
-                    the access token. Click the **Show** button to view the
-                    exact value of this.
-                -   **Actions -**
-                    -   **Edit:** Click to edit the OAuth/OpenID Connect
-                        Configurations
-                    -   **Revoke:** Click to revoke (deactivate) the OAuth
-                        application. This action revokes all tokens issued
-                        for this application. In order to activate the
-                        application, you have to regenerate the consumer
-                        secret.
-                    -   **Regenerate Secret:** Click to regenerate the
-                        secret key of the OAuth application.
-                    -   **Delete:** Click to delete the OAuth/OpenID Connect
-                        Configurations.
-
-6.  Configure the Service Principal Name (`SPNName`) and Service Principal Password (`SPNPassword`).
+6.  Configure the Identity Provider.
 
     1.  Navigate to the **Main** menu, click **Add** under the **Identity Providers** menu.
 
@@ -164,7 +159,7 @@ Follow the instructions below to configure Kerberos Grant using the Identity Se
         -   **Identity Provider Name** :
             [example.com](http://example.com)
 
-        -   **Alias** : <https://192.168.53.12:9443/oauth/token>
+        -   **Alias** : <https://localhost:9443/oauth2/token>
 
         [![add-new-idp]({{base_path}}/assets/img/learn/add-new-idp.png)]({{base_path}}/assets/img/learn/add-new-idp.png)
 
